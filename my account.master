@@ -1,0 +1,105 @@
+﻿
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="my account.master.cs" Inherits="my_account" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="G:\dotnet\css\bootsrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="G:\dotnet\css\bootsrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="G:\dotnet\css\hover.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0\css\font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0\css\font-awesome.min.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src="G:\dotnet\js\jquery.js"></script>
+     <script type="text/javascript" src="G:\dotnet\js\bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+         </asp:ContentPlaceHolder>
+     
+        <style>   /* Style the links inside the sidenav */
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -120px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding:15px; /* 15px padding */
+  width: 135px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+  height:20px;
+  float:right;
+  padding-right:5px;
+  
+
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 72px;
+  background-color: #1abb0d;
+}
+
+#blog {
+  top: 132px;
+  background-color: #2196F3; /* Blue */
+}
+
+#projects {
+  top: 192px;
+  background-color: #f44336; /* Red */
+}
+
+#contact {
+  top: 252px;
+  background-color: #555 /* Light Black */
+}
+            #pass {
+                top:312px;
+                background-color:#feb541;
+            }
+
+            #hm {
+                top:432px;
+                background-color:#6c4cdc;
+            }
+            #c {
+                top:372px;
+                background-color:#fc0ae9;
+            }
+
+            </style>
+
+   
+</head>
+<body>
+    <form id="form1" runat="server">  
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+        <div style="height:60px;width:1335px;margin-left:0px;background-color:#807f7f;border-radius:10px 10px">
+        <%--<div style="height:100px;width:100px;border-radius:100%  100%;background-color:#C0C0C0; float:left"> </div>--%>
+    </div></asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"> 
+            <div id="mySidenav" class="sidenav">
+                <a href="view profile.aspx" id="about" >View Profile<span class="fa fa-user" style="font-size:20px;float:right"></span></a>
+                 <a href="profiile1.aspx" id="blog" >Edit Profile<span class="fa fa-edit" style="font-size:20px;float:right"></span></a> 
+                <a href="userorder.aspx" id="projects" >My Order<span class="fa fa-list" style="font-size:20px;float:right"></span></a>
+                 <a href="userrequirement.aspx" id="contact" >Requirement<span class="fa fa-dollar" style="font-size:20px;float:right"></span></a> 
+                <a href="change passuser.aspx" id="pass" >Change Pass<span class="fa fa-lock" style="font-size:20px;float:right"></span></a>
+                 <a href="complain.aspx" id="c" >Feedback<span class="fa fa-file" style="font-size:20px;float:right"></span></a>
+                 <a href="homeuser.aspx" id="hm" >Home<span class="fa fa-home" style="font-size:20px;float:right"></span></a>
+            </div>
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            <div style="border-radius:10px 10px; background-color:rgba(202, 235, 254, 0.50);height:650px;width:880px;margin-top:5px; margin-left:30px"></div>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,307 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="userMasterPage.master.cs" Inherits="userMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="G:\dotnet\css\bootsrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="G:\dotnet\css\bootsrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="G:\dotnet\css\hover.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0\css\font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0\css\font-awesome.min.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script type="text/javascript" src="G:\dotnet\js\jquery.js"></script>
+     <script type="text/javascript" src="G:\dotnet\js\bootstrap.min.js"></script>
+   
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            border: 1px solid #006600;
+        }
+        ul{
+            list-style-type: none;
+            margin:0;
+            padding:0;
+            overflow :hidden;
+            background-color: #0066FF;
+            color:white;
+          
+        }
+       
+        li {
+            float: left; 
+        }
+            
+        li a {
+            
+            display: block;
+            color:White;
+            text-align:center;
+            padding:14px 16px;
+            text-decoration:none;
+             }
+            li a:hover {
+                background-color:#c8c3c3;
+                color:black;
+            }
+        .auto-style2 {
+            text-align: center;
+        }
+        .auto-style3 {
+            color: #FFFFFF;
+        }
+        /* Style the navbar */
+#navbar {
+  overflow: hidden;
+  /*background-color: #333;*/
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+        #wish {
+            color:red;
+        }
+        #wish:hover {
+            color:white;
+            background-color:red;
+        }
+
+
+   </style>
+    <script>
+
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function () { myFunction() };
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+       
+
+       function myFunction()
+       {
+           var x = document.getElementById("TextBox2");
+           if (x.type === "password")
+           {
+               x.type = "text";
+           }
+           else
+           {
+               x.type = "password";
+           }
+       }
+
+   
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="navbar" class="sticky" style="width:1333px">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            <div id="navbar"  style="background-color:#073ef2; color:white; height:50px">
+                <ul >
+                    <a href="Default.aspx" style="float:left;font-size:36px;text-decoration:none;color:white;height:50px;width:200px;background-color:black">_Fashionista_</a>
+                    <li style="float:right"><a href="cart.aspx">&nbsp;<asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="Red"  style="font-size: large; color: #FFFFFF; background-color: #FF0000; border-width:6px; border-radius:100% 100% 100% 100% " BorderColor="Red" BorderStyle="Double" BorderWidth="4px" ></asp:Label>
+                        
+                         <span class="fa fa-shopping-cart"  style="font-size:25px"></span></a></li>
+                        <asp:Label ID="Label3" runat="server" Text="Welcome_" style="font-size:20px; float:left"></asp:Label>
+                        <asp:Label ID="Label2" runat="server" Text="Label" style="font-size:20px; float:left"></asp:Label>
+                        <a  href="addwish.aspx" ><span class="fa fa-heart" id="wish" style="font-size:28px;float:right;margin-top:16px;color:red;border:3px solid white;background-color:white;border-radius:100% 100%;text-align: center"></span></a>
+                        <span class="fa fa-search" style="font-size:22px; float:right;margin-top:9px;margin-right:15px"></span>
+                        <asp:TextBox ID="TextBox1" runat="server" placeholder="       What you are looking for??" style="width:300px; height:28px;border-radius:4px 4px;float:right;margin-top:9px; background-color: #F0F0F0;"></asp:TextBox>
+                   
+                </ul>
+            </div>
+            <nav id="navbar">
+                <div  id="myTopnav">
+                    <ul class="nav navbar-nav" style="background-color:#0066FF; ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">
+                        <li ><a href="homeuser.aspx"><span class="fa fa-home" style="font-size:20px"></span>Home</a></li>
+                        <li ><a href="men.aspx"><span class="fa fa-male" style="font-size:20px"></span>Men's Wear</a></li>
+                        <li ><a href="women.aspx"><span class="fa fa-female" style="font-size:20px"></span>Women's Wear</a></li>
+                        <li ><a href="kid.aspx"><span class="fa fa-child" style="font-size:20px"></span>Kid's Wear</a></li>
+                        <li ><a href="appliance.aspx"><span class="fa fa-plug" style="font-size:20px"></span>Home Appliances</a></li>
+                        <li ><a href="search.aspx"><span class="fa fa-search" style="font-size:20px"></span>Search</a></li>
+                        <li ><a href="view profile.aspx"><span class="fa fa-user" style="font-size:20px"></span>My Account</a></li>
+                        <li style="float:right"><a href="sign in.aspx"><span class="fa fa-reply" style="font-size:20px"></span>Logout</a></li>
+                        <%--<li style="float:right"><a href="c.aspx"><span class="fa fa-reply" style="font-size:20px"></span>c</a></li>--%>
+                    </ul>
+                </div>
+            </nav>
+        
+        </asp:ContentPlaceHolder>
+        </div> <br /> <br />
+                <br />  <br />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            <div>
+            </div>
+        </asp:ContentPlaceHolder>
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server" >
+             <table class="auto-style1" style="border-style: none">
+                 <tr>
+                     <td style="width: 25%; vertical-align: top;">
+                         <div style="background-color: #FFFFFF; margin-top:0px; text-align: left;">
+                             <div class="auto-style2" style="background-color:black;color:white; height: 32px; font-size: x-large;">
+                                 <strong>Crack Deals</strong></div>
+                             <asp:Image ID="Image1" runat="server" class="img.responsive" Height="293px" ImageUrl="~/minor project/clothimg.gif" Width="342px" />
+                             <br />
+                             <div style="height: 7px; background-color: #CCCCCC">
+                             </div>
+                             <div style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #FF0000;background-color:#CCFFCC">
+                                 <br />
+                                 <marquee direction="up" behaviour="alternate" style="height: 561px;color:#de0c0c">
+                                    * <span class="auto-style6">Fashionista gives you the best deals and all latest fashion related products , the product have a favarable quality for all skin type. </span>
+                                <br class="auto-style6" />
+                                <br />
+                                <br />
+                                <asp:Image ID="Image2" runat="server" class="img.responsive" Height="200px" ImageUrl="~/minor project/as1.jpg" Width="342px" />
+                                <br />
+                                <br />
+                                <div style="height: 7px; background-color: #CCCCCC">
+                                </div>
+                                <br />
+                                <br />* Online Shopping Fashionista gives you the facility of Cash On Delivery that will asure you about the product delivery.&nbsp;
+                                <br />
+                                <br />
+                                <br />
+                                <asp:Image ID="Image3" runat="server" class="img.responsive" Height="200px" ImageUrl="~/minor project/COD.jpg" Width="342px" />
+                                <br />
+                                <br />
+                                <div style="height: 7px; background-color: #CCCCCC">
+                                </div>
+                                <br /></marquee>
+                             </div>
+                         </div>
+                         <div style="height: 7px; background-color: #CCCCCC">
+                         </div>
+                         <asp:Image ID="Image4" runat="server" Height="477px" ImageUrl="~/minor project/img27.jpg" Width="340px" />
+                         <div style="height: 7px; background-color: #CCCCCC">
+                         </div>
+                         <asp:Image ID="picture" runat="server" Height="672px" ImageUrl="~/minor project/jeff-sheldon-3232-unsplash.jpg" Width="341px" />
+                     </td>
+                     <td style="vertical-align: top">
+                         <div>
+                             <br />
+                             <br />
+                             <br />
+                             <br />
+                             <br />
+                             <br />
+                         </div>
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br />
+                         <br /></td>
+                 </tr>
+                 <tr>
+                     <td style="vertical-align: top; background-color: #333333; height:20px" class="auto-style2" colspan="2"><a href="mailto:Copyrights@2K18"><span class="auto-style3">Copyrights@2018ts@2K18">yrights@2018</span></a><span class="auto-style3"> - by Keshika Gupta</span><br />
+                         </td>
+                 </tr>
+             </table>
+        </asp:ContentPlaceHolder>
+        <br />
+    </form>
+</body>
+</html>
